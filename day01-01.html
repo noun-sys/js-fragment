@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day01-javascript</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // es6之前都是这种定义方式
+        var a = 100;
+        console.log(a);
+        var age = 10, name = '令狐冲'; // 声明多个变量采用逗号隔离
+        // 数据类型
+        /*
+            1. 基本数据类型: String,Number,Boolean,Null,Undefined
+            2. 引用数据类型: Object
+        */
+        // 1.1 字符串类型
+        var a = "abcde";
+        var b = "千古壹号";
+        var c = "123123";
+        var d = '哈哈哈哈哈';
+        var e = "";     //空字符串
+        //var f = haha; // 没使用引号，到这里会直接报错。因为会被认为是js代码，但是之前并没有定义 haha。
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        // 1.1.1获取字符串的长度方法
+        console.log(a.length);
+        // 1.1.2.中文算一个字符
+        console.log(b.length);
+        // 1.2 Number类型
+        var a = 100; // 定义一个变量 a，并且赋值整数100
+        console.log(typeof a); // 输出变量 a 的类型
+        var b = 12.3; // 定义一个变量 b，并且赋值浮点数 12.3
+        console.log(typeof a);
+        // 最大值和最小值
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        // 2.引用数据类型
+        var obj = new Object();
+        var obj2 = obj;
+        obj.name = 'vue';
+        console.log(obj.name);
+        console.log(obj2.name);
+        // 特殊类型的打印
+        console.log(typeof {});
+        console.log(typeof []);
+        // 流程代码书写
+        var height = parseFloat(prompt("请输入升高"));
+        var weight = parseFloat(prompt("请输入体重"));
+        var BMI = weight / Math.pow(height);
+        if (BMI < 18.5) {
+            alert("偏瘦");
+        }
+        else if (BMI < 25) {
+            alert("正常");
+        }
+        else if (BMI < 28) {
+            alert("过重");
+        }
+        if (BMI <= 32) {
+            alert("肥胖");
+        } else {
+            alert("非常肥胖");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="btn">我是按钮, 需要点击</div>
+</body>
+    <script type="text/javascript">
+        // 定义对象 && 访问对象
+        var obj = new Object();
+        obj.sayName = function () {
+            console.log("hello world");
+        }
+        obj.name = '仇晓';
+        obj.age = 17;
+        obj.gender = 'male';
+        console.log(obj.sayName);  //没加括号，就是获取方法
+        console.log('-----------');
+        console.log(obj.sayName());  //加了括号，就是调用方法。即：执行函数内容，并执行函数体的内容
+        console.log(JSON.stringify(obj));
+        console.log('name' in obj);
+        
+        var btn = document.getElementById('btn');
+        //2.绑定事件
+        btn.onclick = function () {
+            console.log('点击按钮后，要做的事情');
+        };
+    </script>
+</html>
